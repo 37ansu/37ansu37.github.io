@@ -13,8 +13,8 @@
 ## 🌐 웹 페이지 보기
 
 ### 메인 페이지
-- **Index 페이지**: [https://YOUR_USERNAME.github.io/REPOSITORY_NAME/index.html](https://YOUR_USERNAME.github.io/REPOSITORY_NAME/index.html)
-- **README 페이지**: [https://YOUR_USERNAME.github.io/REPOSITORY_NAME/README.html](https://YOUR_USERNAME.github.io/REPOSITORY_NAME/README.html)
+- **Index 페이지**: [https://37ansu.github.io/37ansu37.github.io/index.html](https://37ansu.github.io/37ansu.github.io/index.html)
+- **README 페이지**: [https://37ansu.github.io/37ansu37.github.io/README.html](https://37ansu.github.io/37ansu.github.io/README.html)
 
 > **GitHub Pages 활성화 방법:**
 > 1. GitHub 저장소 → Settings → Pages
@@ -215,3 +215,4 @@ https://colab.research.google.com/github/YOUR_USERNAME/REPOSITORY_NAME/blob/main
 GitHub 저장소 업로드나 링크 설정에 문제가 있으면 언제든지 문의해주세요!
 
 **작성일**: 2026-01-15
+
