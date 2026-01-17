@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages 접속 링크</title>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', -apple-system, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        h1 {
+            margin-bottom: 2rem;
+            color: #2d3748;
+        }
+
+        .link-box {
+            background: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            word-break: break-all;
+        }
+
+        .github-link {
+            font-size: 1.2rem;
+            color: #4ECDC4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .github-link:hover {
+            text-decoration: underline;
+        }
+
+        .note {
+            color: #718096;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            text-align: left;
+            background: #fff5f5;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #FF6B6B;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🚀 GitHub 접속 링크 생성기</h1>
+
+        <div class="input-group">
+            <label for="username">GitHub 아이디를 입력하세요:</label>
+            <input type="text" id="username" placeholder="예: username">
+        </div>
+
+        <button onclick="generateLink()">접속하기</button>
+
+        <div id="result" style="display: none; margin-top: 2rem;">
+            <h3>👇 아래 링크를 클릭하세요:</h3>
+            <div class="link-box">
+                <a href="#" id="final-link" class="github-link" target="_blank"></a>
+            </div>
+            <div class="note">
+                <strong>주의사항:</strong><br>
+                1. 아직 배포하지 않았다면 접속되지 않을 수 있습니다.<br>
+                2. 배포 후 약 1~2분 정도 기다려야 사이트가 보입니다.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function generateLink() {
+            const username = document.getElementById('username').value.trim();
+            if (!username) {
+                alert('GitHub 아이디를 입력해주세요!');
+                return;
+            }
+
+            const url = `https://${username}.github.io/hobby-community/`;
+            const link = document.getElementById('final-link');
+            const result = document.getElementById('result');
+
+            link.href = url;
+            link.textContent = url;
+            result.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
